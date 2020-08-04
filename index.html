@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h2>{{ person.name }} -- {{ person.age }}</h2>
+    <h3>{{ person.fav }}</h3>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <h3>{{ msg }}</h3>
+    <div v-text="msg"></div>
+    <div v-text="person.name"></div>
+    <div v-html="info"></div>
+    <input type="text" v-model="person.name"></input>
+    <input type="text" v-model="msg"></input>
+    
+  </div>
+  <script src="./myvue.js"></script>
+  <script>
+    let vm = new Mvue({
+      el: '#app',
+      data: {
+        person: {
+          name: 'zjt',
+          age: 25,
+          fav: 'code'
+        },
+        msg: 'hello',
+        info: '<h1>hello world</h1>'
+      }
+    })
+  </script>
+
+
+</body>
+</html>
